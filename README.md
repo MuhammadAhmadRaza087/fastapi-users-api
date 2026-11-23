@@ -42,7 +42,7 @@ Open http://127.0.0.1:8000/docs
 
 ```bash
 sudo apt update && sudo apt install -y git python3-venv
-cd ~ && git clone https://github.com/<your-username>/fastapi-users-api.git
+cd ~ && git clone https://github.com/MuhammadAhmadRaza087/fastapi-users-api.git
 cd fastapi-users-api
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
