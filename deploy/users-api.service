@@ -1,0 +1,15 @@
+[Unit]
+Description=Users API (FastAPI)
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/fastapi-users-api
+Environment=DATABASE_URL=sqlite:///./data/app.db
+Environment=SEED_ON_STARTUP=true
+ExecStart=/home/ubuntu/fastapi-users-api/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
